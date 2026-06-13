@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Math Website</title>
+    <title>Grade 1 Subtraction</title>
     <style>
-body {
+      body {
     background: linear-gradient(135deg, #4a90e2, #50e3c2, #b06ab3);
     background-size: 400% 400%;
     animation: gradientMove 10s ease infinite;
@@ -15,7 +15,7 @@ body {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-        /* NAVBAR */
+
         .navbar {
             width: 100%;
             background: rgba(0, 0, 0, 0.6);
@@ -37,57 +37,48 @@ body {
             color: #00c8ff;
         }
 
-        /* PAGE TITLE */
         h1 {
             margin-top: 120px;
-            font-size: 50px;
+            font-size: 45px;
             text-shadow: 0 0 10px black;
         }
 
-        /* BUTTONS */
-        .button-container {
-            margin-top: 40px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .btn {
-            padding: 20px 40px;
+        .lesson-box {
+            margin: 40px auto;
+            width: 60%;
             background: rgba(0, 0, 0, 0.7);
-            border: 2px solid white;
+            padding: 30px;
             border-radius: 15px;
-            color: white;
-            font-size: 24px;
-            text-decoration: none;
-            transition: 0.25s;
+            border: 2px solid white;
+            font-size: 22px;
+            line-height: 1.6;
         }
 
-        .btn:hover {
-            background: white;
-            color: black;
-            transform: scale(1.1);
+        .example {
+            font-size: 30px;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
     <div class="navbar">
         <a href="/">Home</a>
         <a href="/lessons">Lessons</a>
+        <a href="/grade1">Grade 1</a>
         <a href="/practice">Practice</a>
-        <a href="/categories">Categories</a>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <h1>Welcome to the Math Website!</h1>
-    <p>Select a section to begin learning.</p>
+    <h1>Grade 1 – Subtraction</h1>
 
-    <div class="button-container">
-        <a class="btn" href="/lessons">Lessons</a>
-        <a class="btn" href="/practice">Practice</a>
-        <a class="btn" href="/categories">Categories</a>
+    <div class="lesson-box">
+        <p>Subtraction means taking away.</p>
+
+        <div class="example">5 − 2 = 3</div>
+        <div class="example">7 − 3 = 4</div>
+        <div class="example">9 − 1 = 8</div>
+
+        <p>When you subtract, the number gets smaller.</p>
     </div>
 
 </body>

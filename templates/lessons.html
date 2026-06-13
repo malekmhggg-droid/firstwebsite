@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Math Website</title>
+    <title>Lessons</title>
     <style>
-body {
+        body {
     background: linear-gradient(135deg, #4a90e2, #50e3c2, #b06ab3);
     background-size: 400% 400%;
     animation: gradientMove 10s ease infinite;
@@ -15,6 +15,7 @@ body {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+
         /* NAVBAR */
         .navbar {
             width: 100%;
@@ -37,36 +38,40 @@ body {
             color: #00c8ff;
         }
 
-        /* PAGE TITLE */
         h1 {
             margin-top: 120px;
-            font-size: 50px;
+            font-size: 45px;
             text-shadow: 0 0 10px black;
         }
 
-        /* BUTTONS */
-        .button-container {
+        /* LESSON CARDS */
+        .card-container {
             margin-top: 40px;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 30px;
         }
 
-        .btn {
-            padding: 20px 40px;
+        .card {
+            width: 250px;
+            padding: 20px;
             background: rgba(0, 0, 0, 0.7);
             border: 2px solid white;
             border-radius: 15px;
-            color: white;
-            font-size: 24px;
-            text-decoration: none;
             transition: 0.25s;
+            text-decoration: none;
+            color: white;
         }
 
-        .btn:hover {
+        .card:hover {
             background: white;
             color: black;
             transform: scale(1.1);
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -80,14 +85,34 @@ body {
         <a href="/categories">Categories</a>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <h1>Welcome to the Math Website!</h1>
-    <p>Select a section to begin learning.</p>
+    <h1>Math Lessons</h1>
+    <p>Select a topic to begin learning.</p>
 
-    <div class="button-container">
-        <a class="btn" href="/lessons">Lessons</a>
-        <a class="btn" href="/practice">Practice</a>
-        <a class="btn" href="/categories">Categories</a>
+    <div class="card-container">
+        <a class="card" href="/lessons/algebra">
+            <h2>Algebra</h2>
+            <p>Variables, equations, expressions</p>
+        </a>
+
+        <a class="card" href="/lessons/fractions">
+            <h2>Fractions</h2>
+            <p>Adding, subtracting, multiplying</p>
+        </a>
+
+        <a class="card" href="/lessons/geometry">
+            <h2>Geometry</h2>
+            <p>Shapes, angles, area</p>
+        </a>
+
+        <a class="card" href="/lessons/integers">
+            <h2>Integers</h2>
+            <p>Positive & negative numbers</p>
+        </a>
+
+        <a class="card" href="/lessons/decimals">
+            <h2>Decimals</h2>
+            <p>Place value, operations</p>
+        </a>
     </div>
 
 </body>

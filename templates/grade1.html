@@ -1,0 +1,118 @@
+!DOCTYPE html
+html lang=en
+head
+    meta charset=UTF-8
+    titleGrade 1 Lessonstitle
+    style
+       body {
+    background: linear-gradient(135deg, #4a90e2, #50e3c2, #b06ab3);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+         NAVBAR 
+        .navbar {
+            width 100%;
+            background rgba(0, 0, 0, 0.6);
+            padding 15px 0;
+            position fixed;
+            top 0;
+            left 0;
+        }
+
+        .navbar a {
+            color white;
+            margin 0 20px;
+            text-decoration none;
+            font-size 20px;
+            transition 0.2s;
+        }
+
+        .navbar ahover {
+            color #00c8ff;
+        }
+
+        h1 {
+            margin-top 120px;
+            font-size 45px;
+            text-shadow 0 0 10px black;
+        }
+
+         LESSON CARDS 
+        .card-container {
+            margin-top 40px;
+            display flex;
+            justify-content center;
+            flex-wrap wrap;
+            gap 30px;
+        }
+
+        .card {
+            width 250px;
+            padding 20px;
+            background rgba(0, 0, 0, 0.7);
+            border 2px solid white;
+            border-radius 15px;
+            transition 0.25s;
+            text-decoration none;
+            color white;
+        }
+
+        .cardhover {
+            background white;
+            color black;
+            transform scale(1.1);
+        }
+
+        .card h2 {
+            margin-bottom 10px;
+        }
+    style
+head
+body
+
+    !-- NAVBAR --
+    div class=navbar
+        a href=Homea
+        a href=lessonsLessonsa
+        a href=practicePracticea
+        a href=categoriesCategoriesa
+    div
+
+    h1Grade 1 Lessonsh1
+    pChoose a topic to begin learning.p
+
+    div class=card-container
+        a class=card href=grade1addition
+            h2Additionh2
+            p1+1, 2+3, simple sumsp
+        a
+
+        a class=card href=grade1subtraction
+            h2Subtractionh2
+            p5−2, 7−3, simple differencesp
+        a
+
+        a class=card href=grade1counting
+            h2Countingh2
+            pCounting to 20, 50, 100p
+        a
+
+        a class=card href=grade1shapes
+            h2Shapesh2
+            pCircle, square, trianglep
+        a
+
+        a class=card href=grade1placevalue
+            h2Place Valueh2
+            pTens and onesp
+        a
+    div
+
+body
+html
