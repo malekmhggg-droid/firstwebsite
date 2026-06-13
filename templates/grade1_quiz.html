@@ -64,7 +64,10 @@
 
                 {% for option in q.options %}
                     <label>
-                        <input type="radio" name="q{{ loop.index }}" value="{{ option }}" required>
+                        <input type="radio" 
+                               name="q{{ loop.index }}" 
+                               value="{{ option }}" 
+                               required>
                         {{ option }}
                     </label><br>
                 {% endfor %}
