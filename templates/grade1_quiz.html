@@ -55,7 +55,7 @@
 
     <form action="/grade1/quiz/submit" method="POST">
 
-        <!-- Hidden field to store the exact questions used -->
+        <!-- Hidden field to store the EXACT questions used -->
         <input type="hidden" name="questions_json" value='{{ questions | tojson }}'>
 
         <div class="quiz-box">
