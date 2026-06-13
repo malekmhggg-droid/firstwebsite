@@ -74,7 +74,7 @@ def grade1_subtraction():
     return render_template("grade1_subtraction.html")
 
 @app.route("/grade1/counting")
-def grade1_counting():
+def grade1_countin():
     return "<h1>Grade 1 Counting Lesson Coming Soon</h1>"
 
 @app.route("/grade1/shapes")
