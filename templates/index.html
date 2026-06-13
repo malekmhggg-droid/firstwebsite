@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Math Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 40px;
+        }
+
+        .button-container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            background: #0078ff;
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: #005fcc;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
+
     <h1>Welcome to the Math Website!</h1>
-    <p>This is your first math page.</p>
+    <p>Select a category to begin learning.</p>
+
+    <div class="button-container">
+        <a class="btn" href="/lessons">Lessons</a>
+        <a class="btn" href="/practice">Practice</a>
+        <a class="btn" href="/categories">Categories</a>
+    </div>
+
 </body>
 </html>
