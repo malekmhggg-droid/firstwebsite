@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>School Levels</title>
+    <title>Grade 1 Shapes</title>
     <style>
         body {
             margin: 0;
@@ -47,30 +47,20 @@
             text-shadow: 0 0 10px black;
         }
 
-        .card-container {
-            margin-top: 40px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .card {
-            width: 300px;
-            padding: 25px;
+        .lesson-box {
+            margin: 40px auto;
+            width: 60%;
             background: rgba(0, 0, 0, 0.7);
-            border: 2px solid white;
+            padding: 30px;
             border-radius: 15px;
-            transition: 0.25s;
-            text-decoration: none;
-            color: white;
-            font-size: 24px;
+            border: 2px solid white;
+            font-size: 22px;
+            line-height: 1.6;
         }
 
-        .card:hover {
-            background: white;
-            color: black;
-            transform: scale(1.1);
+        .shape-example {
+            font-size: 35px;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -79,16 +69,22 @@
     <div class="navbar">
         <a href="/">Home</a>
         <a href="/lessons">School Levels</a>
-        <a href="/practice">Practice</a>
-        <a href="/categories">Categories</a>
+        <a href="/elementary">Elementary</a>
+        <a href="/grade1">Grade 1</a>
     </div>
 
-    <h1>Select Your School Level</h1>
+    <h1>Grade 1 – Shapes</h1>
 
-    <div class="card-container">
-        <a class="card" href="/elementary">Elementary School</a>
-        <a class="card" href="/middle">Middle School</a>
-        <a class="card" href="/high">High School</a>
+    <div class="lesson-box">
+        <p>Shapes are all around us! Here are the basic shapes you learn in Grade 1:</p>
+
+        <div class="shape-example">● Circle – round, no corners</div>
+        <div class="shape-example">■ Square – 4 equal sides</div>
+        <div class="shape-example">▲ Triangle – 3 sides</div>
+        <div class="shape-example">⬛ Rectangle – 4 sides (2 long, 2 short)</div>
+        <div class="shape-example">⬤ Oval – like a stretched circle</div>
+
+        <p>Shapes help us understand the world. You see them in signs, toys, buildings, and everywhere!</p>
     </div>
 
 </body>

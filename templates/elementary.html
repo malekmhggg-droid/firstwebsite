@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>School Levels</title>
+    <title>Elementary School</title>
     <style>
         body {
             margin: 0;
@@ -20,6 +20,7 @@
             100% { background-position: 0% 50%; }
         }
 
+        /* NAVBAR */
         .navbar {
             width: 100%;
             background: rgba(0, 0, 0, 0.6);
@@ -41,12 +42,14 @@
             color: #00c8ff;
         }
 
+        /* TITLE */
         h1 {
             margin-top: 120px;
             font-size: 45px;
             text-shadow: 0 0 10px black;
         }
 
+        /* GRADE CARDS */
         .card-container {
             margin-top: 40px;
             display: flex;
@@ -56,7 +59,7 @@
         }
 
         .card {
-            width: 300px;
+            width: 250px;
             padding: 25px;
             background: rgba(0, 0, 0, 0.7);
             border: 2px solid white;
@@ -76,6 +79,7 @@
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <div class="navbar">
         <a href="/">Home</a>
         <a href="/lessons">School Levels</a>
@@ -83,12 +87,16 @@
         <a href="/categories">Categories</a>
     </div>
 
-    <h1>Select Your School Level</h1>
+    <h1>Elementary School</h1>
+    <p>Select a grade to begin learning.</p>
 
     <div class="card-container">
-        <a class="card" href="/elementary">Elementary School</a>
-        <a class="card" href="/middle">Middle School</a>
-        <a class="card" href="/high">High School</a>
+        <a class="card" href="/grade1">Grade 1</a>
+        <a class="card" href="/grade2">Grade 2</a>
+        <a class="card" href="/grade3">Grade 3</a>
+        <a class="card" href="/grade4">Grade 4</a>
+        <a class="card" href="/grade5">Grade 5</a>
+        <a class="card" href="/grade6">Grade 6</a>
     </div>
 
 </body>
