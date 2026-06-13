@@ -54,13 +54,17 @@
     <h1 style="margin-top:120px;">Grade 1 Quiz</h1>
 
     <form action="/grade1/quiz/submit" method="POST">
+
+        <!-- Hidden field to store the exact questions used -->
+        <input type="hidden" name="questions_json" value='{{ questions | tojson }}'>
+
         <div class="quiz-box">
             {% for q in questions %}
                 <p><strong>{{ loop.index }}. {{ q.question }}</strong></p>
 
                 {% for option in q.options %}
                     <label>
-                        <input type="radio" name="q{{ loop.parent.index }}" value="{{ option }}" required>
+                        <input type="radio" name="q{{ loop.index }}" value="{{ option }}" required>
                         {{ option }}
                     </label><br>
                 {% endfor %}

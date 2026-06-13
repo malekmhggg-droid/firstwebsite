@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import random
+import json
 
 app = Flask(__name__)
 
@@ -141,22 +142,27 @@ grade1_questions = [
 
 
 # -------------------------
-# QUIZ PAGE
+# GRADE 1 QUIZ PAGE
 # -------------------------
 @app.route("/grade1/quiz")
 def grade1_quiz():
+    # pick 10 questions (here it's exactly 10, but this is future-proof)
     questions = random.sample(grade1_questions, 10)
     return render_template("grade1_quiz.html", questions=questions)
 
 
 # -------------------------
-# QUIZ SUBMISSION
+# GRADE 1 QUIZ SUBMISSION
 # -------------------------
 @app.route("/grade1/quiz/submit", methods=["POST"])
 def grade1_quiz_submit():
+    # Load the SAME questions that were shown in the quiz
+    questions_json = request.form.get("questions_json")
+    questions = json.loads(questions_json)
+
     score = 0
 
-    for i, q in enumerate(grade1_questions[:10], start=1):
+    for i, q in enumerate(questions, start=1):
         user_answer = request.form.get(f"q{i}")
         if user_answer == q["answer"]:
             score += 1
@@ -175,11 +181,16 @@ def grade1_quiz_submit():
 
     passed = score >= 6
 
-    return render_template("grade1_quiz_results.html", score=score, grade=grade, passed=passed)
+    return render_template(
+        "grade1_quiz_results.html",
+        score=score,
+        grade=grade,
+        passed=passed
+    )
 
 
 # -------------------------
 # RUN APP
 # -------------------------
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
