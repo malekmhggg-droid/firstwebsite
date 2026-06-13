@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Grade 1 Place Value</title>
+    <title>Grade 1 – Place Value</title>
     <style>
         body {
             margin: 0;
@@ -20,42 +20,14 @@
             100% { background-position: 0% 50%; }
         }
 
-        .navbar {
-            width: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 15px 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-
-        .navbar a {
-            color: white;
-            margin: 0 20px;
-            text-decoration: none;
-            font-size: 20px;
-            transition: 0.2s;
-        }
-
-        .navbar a:hover {
-            color: #00c8ff;
-        }
-
-        h1 {
-            margin-top: 120px;
-            font-size: 45px;
-            text-shadow: 0 0 10px black;
-        }
-
         .lesson-box {
-            margin: 40px auto;
+            margin: 140px auto;
             width: 60%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.75);
             padding: 30px;
             border-radius: 15px;
             border: 2px solid white;
             font-size: 22px;
-            line-height: 1.6;
         }
 
         .example {
@@ -67,20 +39,28 @@
             color: #00eaff;
             font-weight: bold;
         }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: white;
+            color: black;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <a href="/">Home</a>
-        <a href="/lessons">School Levels</a>
-        <a href="/elementary">Elementary</a>
-        <a href="/grade1">Grade 1</a>
-    </div>
-
-    <h1>Grade 1 – Place Value</h1>
-
     <div class="lesson-box">
+        <h1>Grade 1 – Place Value</h1>
+
         <p>Place value tells us what each digit in a number means.</p>
 
         <div class="example">
@@ -95,20 +75,9 @@
             <span class="highlight">48</span> = 4 tens and 8 ones
         </div>
 
-        <p>
-            Tens are groups of 10.  
-            Ones are single units.
-        </p>
+        <p>Tens are groups of 10. Ones are single units.</p>
 
-        <div class="example">
-            ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ = 10 (one ten)
-        </div>
-
-        <div class="example">
-            ⭐⭐⭐ = 3 ones
-        </div>
-
-        <p>Place value helps you understand bigger numbers and do harder math later.</p>
+        <a class="back-btn" href="/grade1">⬅ Back to Grade 1</a>
     </div>
 
 </body>
