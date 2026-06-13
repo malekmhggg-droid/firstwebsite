@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+import random
 
 app = Flask(__name__)
 
@@ -31,7 +32,7 @@ def categories():
 
 
 # -------------------------
-# LESSONS SUBPAGES (Algebra, Fractions, etc.)
+# OLD LESSONS (IGNORE FOR NOW)
 # -------------------------
 @app.route("/lessons/algebra")
 def algebra():
@@ -55,36 +56,8 @@ def decimals():
 
 
 # -------------------------
-# GRADE 1 MAIN PAGE
+# SCHOOL LEVEL PAGES
 # -------------------------
-@app.route("/grade1")
-def grade1():
-    return render_template("grade1.html")
-
-
-# -------------------------
-# GRADE 1 LESSON PAGES
-# -------------------------
-@app.route("/grade1/addition")
-def grade1_addition():
-    return render_template("grade1_addition.html")
-
-@app.route("/grade1/subtraction")
-def grade1_subtraction():
-    return render_template("grade1_subtraction.html")
-
-@app.route("/grade1/counting")
-def grade1_countin():
-    return "<h1>Grade 1 Counting Lesson Coming Soon</h1>"
-
-@app.route("/grade1/shapes")
-def grade1_shapes():
-    return "<h1>Grade 1 Shapes Lesson Coming Soon</h1>"
-
-@app.route("/grade1/placevalue")
-def grade1_placevalue():
-    return "<h1>Grade 1 Place Value Lesson Coming Soon</h1>"
-
 @app.route("/elementary")
 def elementary():
     return render_template("elementary.html")
@@ -96,6 +69,14 @@ def middle():
 @app.route("/high")
 def high():
     return render_template("high.html")
+
+
+# -------------------------
+# GRADE PAGES
+# -------------------------
+@app.route("/grade1")
+def grade1():
+    return render_template("grade1.html")
 
 @app.route("/grade2")
 def grade2():
@@ -117,6 +98,18 @@ def grade5():
 def grade6():
     return "<h1>Grade 6 Coming Soon</h1>"
 
+
+# -------------------------
+# GRADE 1 LESSON PAGES
+# -------------------------
+@app.route("/grade1/addition")
+def grade1_addition():
+    return render_template("grade1_addition.html")
+
+@app.route("/grade1/subtraction")
+def grade1_subtraction():
+    return render_template("grade1_subtraction.html")
+
 @app.route("/grade1/counting")
 def grade1_counting():
     return render_template("grade1_counting.html")
@@ -129,10 +122,6 @@ def grade1_shapes():
 def grade1_placevalue():
     return render_template("grade1_placevalue.html")
 
-from flask import Flask, render_template, request
-import random
-
-app = Flask(__name__)
 
 # -------------------------
 # GRADE 1 QUIZ QUESTIONS
@@ -150,6 +139,7 @@ grade1_questions = [
     {"question": "In 35, what is the ones digit?", "options": ["3", "5", "0"], "answer": "5"}
 ]
 
+
 # -------------------------
 # QUIZ PAGE
 # -------------------------
@@ -157,6 +147,7 @@ grade1_questions = [
 def grade1_quiz():
     questions = random.sample(grade1_questions, 10)
     return render_template("grade1_quiz.html", questions=questions)
+
 
 # -------------------------
 # QUIZ SUBMISSION
@@ -185,6 +176,7 @@ def grade1_quiz_submit():
     passed = score >= 6
 
     return render_template("grade1_quiz_results.html", score=score, grade=grade, passed=passed)
+
 
 # -------------------------
 # RUN APP
