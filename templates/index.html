@@ -1,94 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Math Website</title>
-    <style>
-body {
-    background: linear-gradient(135deg, #4a90e2, #50e3c2, #b06ab3);
-    background-size: 400% 400%;
-    animation: gradientMove 10s ease infinite;
-}
-
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-        /* NAVBAR */
-        .navbar {
-            width: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 15px 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-
-        .navbar a {
-            color: white;
-            margin: 0 20px;
-            text-decoration: none;
-            font-size: 20px;
-            transition: 0.2s;
-        }
-
-        .navbar a:hover {
-            color: #00c8ff;
-        }
-
-        /* PAGE TITLE */
-        h1 {
-            margin-top: 120px;
-            font-size: 50px;
-            text-shadow: 0 0 10px black;
-        }
-
-        /* BUTTONS */
-        .button-container {
-            margin-top: 40px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .btn {
-            padding: 20px 40px;
-            background: rgba(0, 0, 0, 0.7);
-            border: 2px solid white;
-            border-radius: 15px;
-            color: white;
-            font-size: 24px;
-            text-decoration: none;
-            transition: 0.25s;
-        }
-
-        .btn:hover {
-            background: white;
-            color: black;
-            transform: scale(1.1);
-        }
-    </style>
+    <title>Password Checker</title>
 </head>
 <body>
+    <h1>Password Checker Website</h1>
 
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <a href="/">Home</a>
-        <a href="/lessons">Lessons</a>
-        <a href="/practice">Practice</a>
-        <a href="/categories">Categories</a>
-    </div>
+    <form method="POST">
+        <label>Enter your new password:</label><br>
+        <input type="text" name="password"><br><br>
 
-    <!-- MAIN CONTENT -->
-    <h1>Welcome to the Math Website!</h1>
-    <p>Select a section to begin learning.</p>
+        <label>Enter your password again:</label><br>
+        <input type="text" name="login"><br><br>
 
-    <div class="button-container">
-        <a class="btn" href="/lessons">Lessons</a>
-        <a class="btn" href="/practice">Practice</a>
-        <a class="btn" href="/categories">Categories</a>
-    </div>
+        <button type="submit">Check</button>
+    </form>
 
+    <p>{{ message }}</p>
 </body>
 </html>
